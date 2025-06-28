@@ -41,11 +41,8 @@ export async function POST(request: NextRequest) {
             httpOnly: true,
         })
 
-        return NextResponse.json({ 
-            message: "User LoggedIn successfully",
-            success: true,
-            user 
-        });
+        return response;
+        
     } catch (error: any) {
         console.log("error connecting",error)
         return NextResponse.json({error: error.message}, {status: 500})
